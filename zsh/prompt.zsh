@@ -22,7 +22,7 @@ git_dirty() {
     then
       echo "on %{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
     else
-      echo "on %{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%}"
+      echo "on %{$fg_bold[yellow]%}$(git_prompt_info)%{$fg_bold[red]%}*%{$reset_color%}"
     fi
   fi
 }
@@ -70,8 +70,13 @@ rb_prompt() {
 directory_name() {
   echo "%{$fg_bold[cyan]%}%1/%\/%{$reset_color%}"
 }
+user_host_name() {
+  host=$(hostname -s)
+  echo "%{$fg_bold[red]%}$USER %{$fg_bold[white]%}at %{$fg_bold[green]%}$host%{$reset_color%}"
+}
 
-export PROMPT=$'\n$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n› '
+# export PROMPT=$'\n$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n› '
+export PROMPT=$'\n$(user_host_name) in $(directory_name) $(git_dirty)$(need_push)\n%% '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
 }
