@@ -46,3 +46,9 @@ bindkey '^[[5C' end-of-line
 #bindkey '^[[3~' delete-char
 bindkey '^[^N' newtab
 # bindkey '^?' backward-delete-word
+
+LESSPIPE=`which src-hilite-lesspipe.sh`
+export LESSOPEN="| ${LESSPIPE} %s"
+export LESS='-R'
+# alias less='less -m -N -g -i -J --underline-special --SILENT'
+# alias more='less'
