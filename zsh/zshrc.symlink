@@ -41,3 +41,8 @@ unset config_files
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+export NVM_DIR="/Users/nils/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+ulimit -n 1024
