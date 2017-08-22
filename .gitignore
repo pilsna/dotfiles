@@ -7,3 +7,5 @@ atom.symlink/themes
 sublime3/User/Package\ Control.sublime-settings
 sublime3/User/Package Control.last-run
 git/gitconfig.symlink
+
+bin/p4

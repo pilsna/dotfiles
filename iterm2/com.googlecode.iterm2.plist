@@ -182,6 +182,8 @@
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>NSFontPanelAttributes</key>
+	<string>1, 4</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 459}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -216,14 +218,18 @@
 	</dict>
 	<key>NSWindow Frame Preferences</key>
 	<string>269 313 606 456 0 0 1280 777 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>757 696 400 129 0 0 1920 1057 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>328 288 620 392 0 0 1280 777 </string>
+	<string>648 498 620 392 0 0 1920 1057 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 139 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 148 1018 447 0 0 1280 777 </string>
+	<string>269 126 918 495 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1 5 1274 768 0 0 1280 777 </string>
+	<string>3 -1 1270 777 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>183 0 1002 777 0 0 1280 777 </string>
+	<string>604 0 1002 875 0 0 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -784,7 +790,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Menlo-Regular 13</string>
+			<string>CamingoCode-Regular 13</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1693,10 +1699,16 @@
 	</array>
 	<key>NoSyncConfirmBeta</key>
 	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
+	<integer>0</integer>
 	<key>NoSyncHaveShownPromoWithId_4</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>5312BD03-3A72-4D1D-B131-E334DF05AFEB</string>
+	<key>NoSyncNeverAskAboutSettingAlternateMouseScroll</key>
+	<true/>
 	<key>NoSyncNeverRemindPrefsChangesCopy</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -1723,6 +1735,8 @@
 	<false/>
 	<key>PasteFromClipboard</key>
 	<false/>
+	<key>PasteTabToStringTabStopSize</key>
+	<integer>4</integer>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1777,7 +1791,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-08-31T07:45:37Z</date>
+	<date>2017-03-09T09:44:22Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1785,6 +1799,8 @@
 	<key>Show Toolbelt</key>
 	<false/>
 	<key>ShowBookmarkName</key>
+	<false/>
+	<key>ShowFullScreenTabBar</key>
 	<false/>
 	<key>ShowPaneTitles</key>
 	<true/>
@@ -1827,6 +1843,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.7</string>
+	<string>3.0.14</string>
 </dict>
 </plist>
