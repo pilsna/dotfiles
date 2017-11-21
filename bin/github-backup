@@ -1,0 +1,10 @@
+for repo in "$@"
+do
+    git clone https://github.com/risedigital/$repo.git \
+    && zip -qr $repo.zip $repo \
+    && mv $repo.zip ~/Google\ Drive/Rise\ files/Archived\ Git\ repos \
+    && rm -rdf $repo \
+    && echo "Zipped the repo" \
+    && echo "Moved the repo to Google drive" \
+    && echo "Deleted the folder" 
+done
