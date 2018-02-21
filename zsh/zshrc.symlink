@@ -2,7 +2,7 @@
 export ZSH=$HOME/.dotfiles
 
 # your project folder that we can `c [tab]` to
-export PROJECTS=~/dev
+export PROJECTS=~/Documents/repositories
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
@@ -42,7 +42,7 @@ unset config_files
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# nvm 
 export NVM_DIR="/Users/nils/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-ulimit -n 1024
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
