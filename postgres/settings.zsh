@@ -1,2 +1,2 @@
-PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.5/bin
+PATH=$PATH:/Applications/Postgres.app/Contents/Versions/10/bin
 
