@@ -14,7 +14,7 @@ fi
 
 # Install homebrew packages
 brew install grc coreutils spark
-brew install source-highlight vips lynx lftp leiningen pandoc
-brew install rpm rpm2cpio tree unrar
+brew install source-highlight lynx lftp 
+brew install tree unrar
 
 exit 0
