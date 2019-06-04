@@ -11,9 +11,18 @@ fpath=($ZSH/functions $fpath)
 
 autoload -U $ZSH/functions/*(:t)
 
+# history file
 HISTFILE=~/.zsh_history
+# set history size
 HISTSIZE=10000
+# save history after logout
 SAVEHIST=10000
+# append into history file
+setopt INC_APPEND_HISTORY
+# save only one command if 2 common are same and consistent
+# setopt HIST_IGNORE_DUPS
+# add timestamp for each entry
+setopt EXTENDED_HISTORY 
 
 setopt NO_BG_NICE # don't nice background tasks
 setopt NO_HUP
