@@ -56,3 +56,10 @@ echo '
              \/__/     \/__/     \/__/     \/__/     \/__/  
 
 '
+# asdf-vm for installing languages
+. /usr/local/opt/asdf/asdf.sh
+
+# load pyenv 
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
