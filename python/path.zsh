@@ -4,3 +4,4 @@
 ## export CURL_CA_BUNDLE=
 # source /usr/local/bin/virtualenvwrapper.sh
 ## eval "$(pyenv virtualenv-init -)"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"

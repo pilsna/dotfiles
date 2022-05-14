@@ -56,15 +56,15 @@ echo '
              \/__/     \/__/     \/__/     \/__/     \/__/  
 
 '
-# asdf-vm for installing languages
-. /usr/local/opt/asdf/asdf.sh
 
 # load pyenv 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-export PIP_REQUIRE_VIRTUALENV=true
-
+export PIP_REQUIRE_VIRTUALENV=false
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
