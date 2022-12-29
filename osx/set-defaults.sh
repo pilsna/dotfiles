@@ -43,3 +43,6 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
 # sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+
+# enable the debug menu in Safari
+defaults write com.apple.Safari IncludeInternalDebugMenu 1
