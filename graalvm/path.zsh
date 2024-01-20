@@ -1,2 +1,3 @@
-export GRAALVM_HOME="$HOME/java/graalvm-ce-java17-22.3.0/Contents/Home"
-export PATH="$HOME/java/graalvm-ce-java17-22.3.0/Contents/Home/bin:$PATH"
+export GRAALVM_HOME="$HOME/java/graalvm-jdk-21.0.1+12.1/Contents/Home"
+export JAVA_HOME=$GRAALVM_HOME
+export PATH="$HOME/java/graalvm-jdk-21.0.1+12.1/Contents/Home/bin:$PATH"
