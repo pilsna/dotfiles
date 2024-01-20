@@ -22,7 +22,7 @@
 	<integer>1</integer>
 	<key>Coprocess MRU</key>
 	<array>
-		<string>open /Users/nils/.cache/winetricks/msxml3</string>
+		<string>open /Users/51048/.cache/winetricks/msxml3</string>
 	</array>
 	<key>CopyLastNewline</key>
 	<false/>
@@ -2036,7 +2036,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/nils</string>
+			<string>/Users/51048</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -2768,7 +2768,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/nils</string>
+			<string>/Users/51048</string>
 		</dict>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
