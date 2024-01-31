@@ -28,8 +28,15 @@ do
  source $file
 done
 
+# load brew before compinit
+eval "$(/opt/homebrew/bin/brew shellenv)"
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
+
 # initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
+autoload -Uz compinit
 compinit
 
 # load every completion after autocomplete loads

@@ -56,6 +56,7 @@ bindkey '^[[5C' end-of-line
 bindkey '^[^N' newtab
 # bindkey '^?' backward-delete-word
 
+# less source highlighting requires source-highlight to be installed with brew
 LESSPIPE=`which src-hilite-lesspipe.sh`
 export LESSOPEN="| ${LESSPIPE} %s"
 export LESS='-R'
