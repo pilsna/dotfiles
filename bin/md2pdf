@@ -1,0 +1,58 @@
+//usr/bin/env jbang "$0" "$@" ; exit $?
+//DEPS org.asciidoctor:asciidoctorj:2.5.13
+//DEPS org.asciidoctor:asciidoctorj-pdf:2.3.19
+//DEPS org.asciidoctor:asciidoctorj-diagram:2.3.1
+
+import org.asciidoctor.Asciidoctor;
+import org.asciidoctor.Options;
+import org.asciidoctor.SafeMode;
+import org.asciidoctor.Attributes;
+
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+public class md2pdf {
+
+    public static void main(String[] args) {
+        if (args.length < 1) {
+            System.err.println("Usage: jbang md2pdf.java <input.md> [output.format]");
+            System.err.println("Supported formats: html, pdf");
+            System.exit(1);
+        }
+
+        String inputFile = args[0];
+        String outputFormat = args.length > 1 ? args[1] : "pdf";
+        String outputFile = inputFile.replace(".md", "." + outputFormat);
+
+        try {
+            String markdown = new String(Files.readAllBytes(Paths.get(inputFile)));
+            convertMarkdownToFormat(markdown, outputFile, outputFormat);
+            System.out.println("File generated successfully: " + outputFile);
+        } catch (Exception e) {
+            System.err.println("Error processing file: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    private static void convertMarkdownToFormat(String markdown, String outputFile, String format) {
+        Asciidoctor asciidoctor = Asciidoctor.Factory.create();
+
+        // Configure options
+        Options options = Options.builder()
+            .safe(SafeMode.UNSAFE) // Allow including files and other unsafe operations
+            .backend(format)       // Set the output format (html, pdf, etc.)
+            .attributes(Attributes.builder()
+                .attribute("show-title", true) // Show document title
+                .attribute("skip-front-matter", true) // Skip front matter
+                .build())
+            .toFile(new File(outputFile)) // Output file
+            .build();
+
+        // Convert Markdown to the desired format
+        asciidoctor.convert(markdown, options);
+
+        // Clean up
+        asciidoctor.shutdown();
+    }
+}
